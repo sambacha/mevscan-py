@@ -1,0 +1,21 @@
+name: python
+
+on: push
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      #----------------------------------------------
+      #       check-out repo and set-up python     
+      #----------------------------------------------
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Set up python 
+        uses: actions/setup-python@v2
+        with:
+          python-version: 3.7
+      #--------------------------------
+
+      - name: Install library
+        run: python3 setup.py install
