@@ -19,10 +19,7 @@ class Swaps:
             datetime.strptime(from_date, "%d/%m/%Y").strftime("%s")
         )
 
-        to_timestamp = int(
-            datetime.strptime(
-                to_date,
-                "%d/%m/%Y").strftime("%s"))
+        to_timestamp = int(datetime.strptime(to_date, "%d/%m/%Y").strftime("%s"))
 
         swaps_json = get_data_from(
             query_input=self.query_from_timestamp,
